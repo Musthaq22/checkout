@@ -6,9 +6,9 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: blacksmith-4vcpu-ubuntu-2404
     name: Check licenses
     steps:
-      - uses: actions/checkout@v6
+      - uses: useblacksmith/checkout@v1
       - run: npm ci
       - run: npm run licensed-check
